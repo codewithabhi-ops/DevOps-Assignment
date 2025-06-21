@@ -1,5 +1,14 @@
 pipeline {
     agent any
-stages
 
+
+        stages {
+            stage("clone-repo"){
+                step {
+                    git branch: 'main', credentialsId: 'coder_abhishek', url: 'https://github.com/codewithabhi-ops/DevOps-Assignment.git'
+                }
+            }
+        }
 }
+
+
